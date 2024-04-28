@@ -1,6 +1,6 @@
 
 .header-container {
-    height: 100px;
+    height: 80px;
     /* width: 100%; */
     display: flex;
     justify-content: center;
@@ -42,6 +42,10 @@
     justify-content: center;
 }
 
+.nav-item p {
+    margin: 3px;
+}
+
 .nav-item img, .profile-icon .profile, .for-business .grid {
     width: 30px;
 }
@@ -56,7 +60,10 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+}
 
+.text-with-drop-icon p {
+    margin: 3px;
 }
 
 .for-business {

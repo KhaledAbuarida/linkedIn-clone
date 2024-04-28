@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { AppHeaderComponent } from './app-header/app-header.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 export const routes: Routes = [
-    { path: '', component: AppHeaderComponent },
+    { path: '', component: HomePageComponent },
 ];
 
