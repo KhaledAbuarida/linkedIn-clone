@@ -1,0 +1,83 @@
+.profile-brief {
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.profile-icon {
+    background-color: #BFD3D6F0;
+    /* padding: 5px 20px; */
+    border-radius: 10px 10px 0 0;
+    position:relative;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    border-radius: 50%;
+}
+
+.user-name {
+    margin-top: 45px;
+    padding: 2px 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.user-name h4 {
+    margin-bottom: 0px;
+}
+
+.job-title {
+    text-align: center;
+    color: gray;
+    font-size: .8rem;
+}
+
+.connection-section {
+    padding: 5px 20px;
+}
+
+.connection-section .upper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.connection-number {
+    color: #3C85CF;
+}
+
+.connection-title {
+    color: gray;
+}
+
+.og-square {
+    height: 16px;
+    width: 16px;
+    background-color: #E7A33E;
+}  
+
+.premium-section span {
+    color: gray;
+}
+
+.premium-plan {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.premium-section {
+    padding: 15px 20px;
+}
+
+.connection-section .lower p {
+    margin-bottom: 0px;
+}
