@@ -1,0 +1,42 @@
+.type-container {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 893px;
+    height: 96px;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.type-container ul {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.type-container ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.type-container ul .all {
+    border: none;
+    background-color: #01754F;
+    width: 87px;
+    height: 52px;
+}
+
+.type-container ul .post,
+.mention {
+    width: 120px;
+    height: 49px;
+}
