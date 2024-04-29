@@ -1,0 +1,17 @@
+.manage-container {
+    border-radius: 10px;
+    background-color: #fff;
+    height: 155px;
+    width: 311px;
+    padding: 10px 10px;
+    gap: 20px;
+}
+
+.manage-container .normal {
+    align-items: center;
+}
+
+.manage-container .link {
+    color: #3682CD;
+    font-weight: bold;
+}
