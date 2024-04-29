@@ -40,3 +40,9 @@
     width: 120px;
     height: 49px;
 }
+
+
+.type-container ul li a {
+    text-decoration: none;
+    color: black;
+}
