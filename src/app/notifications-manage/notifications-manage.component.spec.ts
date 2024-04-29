@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManageNotificationsComponent } from './manage-notifications.component';
+import { ManageNotificationsComponent } from './notifications-manage.component';
 
 describe('ManageNotificationsComponent', () => {
   let component: ManageNotificationsComponent;
@@ -10,8 +10,8 @@ describe('ManageNotificationsComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ManageNotificationsComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(ManageNotificationsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

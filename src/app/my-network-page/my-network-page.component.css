@@ -1,0 +1,32 @@
+.body-container {
+    display: flex;
+    justify-content: center;
+    background-color: #e2dfdf;
+    height: calc(100vh - 125px);
+    gap: 20px;
+    padding: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.network-invitations {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.network-body {
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+}
+
+.right {
+    flex-direction: column;
+    display: flex;
+    flex: 9;
+}

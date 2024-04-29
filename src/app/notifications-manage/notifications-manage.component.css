@@ -1,8 +1,8 @@
 .manage-container {
     border-radius: 10px;
     background-color: #fff;
-    height: 155px;
-    width: 311px;
+    height: 130px;
+    width: 350px;
     padding: 10px 10px;
     gap: 20px;
 }
@@ -12,6 +12,7 @@
 }
 
 .manage-container .link {
+    text-decoration: none;
     color: #3682CD;
     font-weight: bold;
 }

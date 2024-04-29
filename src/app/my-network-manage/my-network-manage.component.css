@@ -1,0 +1,40 @@
+.body-container {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 300px;
+    height: 500px;
+    gap: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.body-container .header {
+    margin-bottom: 10px;
+}
+
+.body-container .header p {
+    font-weight: 500;
+    margin: 0;
+}
+
+.body-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.body-container ul li {
+    padding-top: 20px;
+}
+
+.body-container ul li img {
+    padding-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.body-container ul li a {
+    text-decoration: none;
+    color: #979797;
+    font-size: 400;
+}
