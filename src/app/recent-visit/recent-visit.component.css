@@ -1,0 +1,30 @@
+.Recent-div{
+    background-color: #fff;
+    border-radius: 15px;
+    height: 45vh;
+    padding: 5px 20px;
+}
+.icon{
+    width: 30px; height: 30px;
+    margin-right: 10px;
+}
+
+.icon-with-text {
+    display: flex; 
+    align-items: center; 
+   
+    padding-bottom: 25px;
+}
+.groups{
+    padding-bottom: 55px;
+}
+
+.container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+.icon-button {
+    cursor: pointer; /* Show pointer cursor on hover */
+    color: #333; /* Set icon color */
+}
