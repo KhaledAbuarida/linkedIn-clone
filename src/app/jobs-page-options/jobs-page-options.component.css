@@ -2,7 +2,7 @@
     border-radius: 10px;
     background-color: #fff;
     width: 300px;
-    height: 500px;
+    height: 300px;
     gap: 20px;
     padding: 20px;
     overflow: auto;
@@ -36,6 +36,7 @@
 
 .body-container ul li a {
     text-decoration: none;
-    color: #979797;
-    font-size: 400;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
 }

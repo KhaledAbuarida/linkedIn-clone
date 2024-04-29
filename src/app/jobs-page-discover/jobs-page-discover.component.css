@@ -1,0 +1,27 @@
+.body-container {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 700px;
+    height: 225px;
+    gap: 20px;
+    padding: 0px 20px;
+    margin-top: 20px;
+    display: flex;
+    /* align-items: center; */
+    /* Align items vertically */
+}
+
+.content {
+    flex: 1;
+    /* Take remaining space */
+}
+
+.content p {
+    color: #979797;
+}
+
+.arrows {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
