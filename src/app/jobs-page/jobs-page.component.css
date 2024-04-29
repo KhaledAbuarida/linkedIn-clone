@@ -1,43 +1,40 @@
-.notifications-page-container {
+.body-container {
     display: flex;
     background-color: #e2dfdf;
-    height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);
     padding: 20px;
-    justify-content: center;
-    /* gap: 10px */
+    gap: 20px;
 }
+
 
 .left {
-    display: flex;
     flex: 3;
-}
-
-.manage-notifications-container {
-    display: flex;
-    flex: 3;
-}
-
-
-.center {
-    flex: 7;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.center .notifications-type-container {
-    flex: 1;
+.center {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
 }
 
-.center .notifications-body-container {
-    flex: 11;
+.center .jobs-top-comp {
+    flex: 6;
+    /* display: flex;
+    flex-direction: column; */
 }
 
-
+.center .jobs-discover-comp {
+    flex: 6;
+    /* display: flex;
+    flex-direction: column; */
+}
 
 .right {
-    /* display: flex; */
-    flex: 2;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
 }
 
 .links {

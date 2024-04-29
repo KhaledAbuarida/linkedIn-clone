@@ -1,0 +1,58 @@
+.body-container {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 400px;
+    height: 370px;
+    gap: 20px;
+    overflow: auto;
+}
+
+.body-container h3 {
+    padding-top: 20px;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.body-container .recommended {
+    margin: 0;
+    padding: 20px 10px;
+    padding-bottom: 50px;
+    color: #979797;
+}
+
+.body-container .improve {
+    width: 400px;
+    height: 100px;
+    margin: 0;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.body-container .improve p {
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.body-container img {
+    width: 100px;
+    height: 60px;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+
+.explore {
+    padding: 0px 10px;
+}
+
+.body-container a {
+    text-decoration: none;
+    color: #0029FF;
+}
+
+.body-container .show {
+    padding-left: 10px;
+    padding-top: 10px;
+}
