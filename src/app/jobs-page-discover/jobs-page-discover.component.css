@@ -7,13 +7,10 @@
     padding: 0px 20px;
     margin-top: 20px;
     display: flex;
-    /* align-items: center; */
-    /* Align items vertically */
 }
 
 .content {
     flex: 1;
-    /* Take remaining space */
 }
 
 .content p {
