@@ -7,7 +7,9 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <router-outlet>
-    <app-app-header></app-app-header>
+    <div *ngIf="!isSignupPage">
+        <app-app-header></app-app-header>
+    </div>
 
 </router-outlet>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -17,5 +19,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
