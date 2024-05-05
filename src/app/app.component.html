@@ -8,8 +8,11 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <router-outlet>
     <div *ngIf="!isSignupPage">
-        <app-app-header></app-app-header>
+        <div *ngIf="!isLoginPage">
+            <app-app-header></app-app-header>
+        </div>
     </div>
+
 
 </router-outlet>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
