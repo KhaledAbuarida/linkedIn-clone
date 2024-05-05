@@ -1,5 +1,5 @@
 {
-  "name": "linked-in-clone",
+  "name": "linkedin",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -14,6 +14,7 @@
     "@angular/common": "^17.3.0",
     "@angular/compiler": "^17.3.0",
     "@angular/core": "^17.3.0",
+    "@angular/fire": "^17.0.1",
     "@angular/forms": "^17.3.0",
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",

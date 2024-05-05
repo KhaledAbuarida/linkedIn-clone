@@ -3,6 +3,10 @@ import { RouterOutlet, Router } from '@angular/router';
 import { HomePageComponent } from "./home-page/home-page.component";
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { CommonModule } from '@angular/common';
+import { UserServiceService } from './services/user-service.service';
+import { Observable } from 'rxjs';
+import { user } from './model/user';
+import { Email } from '@mui/icons-material';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +17,18 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'linkedIn-clone';
-  constructor(private router: Router) { }
+  
+  userobserv :Observable<user[]>;
+  
+  constructor(private router: Router,userservice :UserServiceService) {
+    this.userobserv =userservice.getUsers();
+    let user1=new user();
+    this.userobserv.subscribe(users => {
+    });
+    const hossam =userservice.finduser('test','Hossam8#');
+    
+    console.log(hossam);
+   }
 
   isSignupPage(): boolean {
     return this.router.url === '/signup';
