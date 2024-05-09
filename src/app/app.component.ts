@@ -25,18 +25,18 @@ export class AppComponent {
     let user1=new user();
     this.userobserv.subscribe(users => {
     });
-    const hossam =userservice.finduser('test','Hossam8#');
+    const hossam =userservice.finduser('khaled@khaled.com','123');
     
     console.log(hossam);
    }
 
   isSignupPage(): boolean {
-    return this.router.url === '/signup';
+    console.log(this.router.url);
+    return (this.router.url == '/signup');
   }
 
   isLoginPage(): boolean {
-    return this.router.url === '/login';
+    return (this.router.url === '/login');
   }
-
 }
 

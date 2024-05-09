@@ -6,15 +6,15 @@
 
     <div class="signup-form">
 
-        <form action="">
+        
             <label for="email" class="labemail">Email </label>
-            <input type="text" class="email" required>
+            <input  [(ngModel)]="inputEmail" type="text" class="email" required>
 
             <hr>
 
             <label for="password" class="labpass">Password </label>
             <div class="password-container">
-                <input type="{{ showPassword? 'text' : 'password' }}" class="password" required>
+                <input [(ngModel)]="inputPassword" type="{{ showPassword? 'text' : 'password' }}" class="password" required>
                 <a (click)="togglePassword()" class="show-password">{{showText}}</a>
             </div>
 
@@ -27,8 +27,7 @@
                 and <a href="">Cookie Policy</a>.
             </p>
 
-            <button type="submit" class="agree">Agree & Join</button>
-        </form>
+            <button class="agree" (click)='signup()'>Agree & Join</button>
 
         <div class="or">
             <hr class="line">
