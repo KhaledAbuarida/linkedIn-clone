@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "linkedIn-clone": {
+    "linkedin": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/linked-in-clone",
+            "outputPath": "dist/linkedin",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "linkedIn-clone:build:production"
+              "buildTarget": "linkedin:build:production"
             },
             "development": {
-              "buildTarget": "linkedIn-clone:build:development"
+              "buildTarget": "linkedin:build:development"
             }
           },
           "defaultConfiguration": "development"
