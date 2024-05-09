@@ -34,4 +34,9 @@ export class AppComponent {
     return this.router.url === '/signup';
   }
 
+  isLoginPage(): boolean {
+    return this.router.url === '/login';
+  }
+
 }
+

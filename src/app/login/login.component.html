@@ -2,9 +2,10 @@
 
 <div class="body-container" ng-init="showText='Show'">
     <img class="logo" src=".\assets\navbar\linkedin.png" alt="">
-    <p class="head">Make the most of your professional life</p>
 
-    <div class="signup-form">
+    <p class="head">Millions of jobs and people hiring</p>
+
+    <div class="login-form">
 
         <form action="">
             <label for="email" class="labemail">Email </label>
@@ -18,16 +19,9 @@
                 <a (click)="togglePassword()" class="show-password">{{showText}}</a>
             </div>
 
-            <hr>
+            <a href="" class="forgot-password">Forgot password?</a>
 
-            <p class="links">
-                By clicking Agree & Join or Continue, you agree to the LinkedIn <a href="">User</a>, <a
-                    href="">Agreement</a>, <a href="">Privacy
-                    Policy</a>,
-                and <a href="">Cookie Policy</a>.
-            </p>
-
-            <button type="submit" class="agree">Agree & Join</button>
+            <button type="submit" class="login">Sign in</button>
         </form>
 
         <div class="or">
@@ -36,15 +30,19 @@
             <hr class="line">
         </div>
 
+        <p class="links">
+            By clicking Agree & Join or Continue, you agree to the LinkedIn <a href="">User</a>, <a
+                href="">Agreement</a>, <a href="">Privacy
+                Policy</a>,
+            and <a href="">Cookie Policy</a>.
+        </p>
+
         <button class="google">
             <img src="./assets/google.png" />
             Continue with Google
         </button>
 
-        <div class="signin">
-            <p>Already have an account? </p>
-            <a href="/login">Sign in</a>
-        </div>
+        <button class="google">New to LinkedIn? <a href="/signup" class="join">Join now</a></button>
 
     </div>
 
