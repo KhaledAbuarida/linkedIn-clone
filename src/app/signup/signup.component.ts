@@ -7,13 +7,14 @@ import { UserServiceService } from '../services/user-service.service';
 import { Firestore } from '@angular/fire/firestore';
 import { CompanyService } from '../services/company.service';
 import { Company } from '../model/company';
+import { AppHeaderComponent } from "../app-header/app-header.component";
 
 @Component({
-  selector: 'app-signup',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css',
+    selector: 'app-signup',
+    standalone: true,
+    templateUrl: './signup.component.html',
+    styleUrl: './signup.component.css',
+    imports: [FormsModule, AppHeaderComponent]
 })
 export class SignupComponent {
   password: string = '';

@@ -1,27 +1,32 @@
 <div class="add-post-container">
+  <!-- upper -->
+  <div class="upper-side">
+    <img src="./assets/navbar/user.jpg" alt="" class="profile-pic" />
 
-    <!-- upper -->
-    <div class="upper-side">
-        <img src="./assets/navbar/profile.png" alt="" class="profile-pic">
-        <input type="text" class="start-post-field" placeholder="Start a post, try writing with AI">
-    </div>
+    <input
+      type="text"
+      class="start-post-field"
+      placeholder="Start a post, try writing with AI"
+      [(ngModel)]="content"
+    />
+    <button>share</button>
+  </div>
 
-    <!-- lower -->
-    <div class="lower-side">
-        <ul>
-            <li class="post-type">
-                <img src="./assets/navbar/image.png" alt="">
-                <p>Media</p>
-            </li>
-            <li class="post-type">
-                <img src="./assets/navbar/calendar.png" alt="">
-                <p>Event</p>
-            </li>
-            <li class="post-type">
-                <img src="./assets/navbar/article.png" alt="">
-                <p>Write article</p>
-            </li>
-        </ul>
-
-    </div>
+  <!-- lower -->
+  <div class="lower-side">
+    <ul>
+      <li class="post-type">
+        <img src="./assets/navbar/image.png" alt="" />
+        <p>Media</p>
+      </li>
+      <li class="post-type">
+        <img src="./assets/navbar/calendar.png" alt="" />
+        <p>Event</p>
+      </li>
+      <li class="post-type">
+        <img src="./assets/navbar/article.png" alt="" />
+        <p>Write article</p>
+      </li>
+    </ul>
+  </div>
 </div>

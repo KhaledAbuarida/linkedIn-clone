@@ -4,7 +4,7 @@
 />
 
 <div class="body-container" ng-init="showText='Show'">
-  <img class="logo" src=".\assets\navbar\linkedin.png" alt="" />
+  <img class="logo" src="./assets/navbar/link.png" alt="" />
 
   <p class="head">Millions of jobs and people hiring</p>
 
@@ -24,9 +24,11 @@
       />
       <a (click)="togglePassword()" class="show-password">{{ showText }}</a>
     </div>
-    <label for="company" >company </label>
-    <input [(ngModel)]="inputCompany" type="checkbox">
 
+    <div class="isCompanyContainer">
+      <input [(ngModel)]="inputCompany" type="checkbox" />
+      <label for="company">company </label>
+    </div>
 
     <a href="" class="forgot-password">Forgot password?</a>
 
@@ -45,14 +47,5 @@
         >Cookie Policy</a
       >.
     </p>
-
-    <button class="google">
-      <img src="./assets/google.png" />
-      Continue with Google
-    </button>
-
-    <button class="google">
-      New to LinkedIn? <a href="/signup" class="join">Join now</a>
-    </button>
   </div>
 </div>

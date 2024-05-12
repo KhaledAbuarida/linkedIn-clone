@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './feed.component.css'
 })
 export class FeedComponent {
-
+  
 }

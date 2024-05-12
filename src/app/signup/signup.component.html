@@ -1,53 +1,54 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+/>
 
 <div class="body-container" ng-init="showText='Show'">
-    <img class="logo" src=".\assets\navbar\linkedin.png" alt="">
-    <p class="head">Make the most of your professional life</p>
+  <img class="logo" src="./assets/navbar/link.png" alt="" />
+  <p class="head">Make the most of your professional life</p>
 
-    <div class="signup-form">
+  <div class="signup-form">
+    <label for="email" class="labemail">Email </label>
+    <input [(ngModel)]="inputEmail" type="text" class="email" required />
 
-        
-            <label for="email" class="labemail">Email </label>
-            <input  [(ngModel)]="inputEmail" type="text" class="email" required>
+    <hr />
 
-            <hr>
-
-            <label for="password" class="labpass">Password </label>
-            <div class="password-container">
-                <input [(ngModel)]="inputPassword" type="{{ showPassword? 'text' : 'password' }}" class="password" required>
-                <a (click)="togglePassword()" class="show-password">{{showText}}</a>
-            </div>
-            
-                <label for="company" >company </label>
-                <input [(ngModel)]="inputCompany" type="checkbox">
-            
-            <hr>
-
-            <p class="links">
-                By clicking Agree & Join or Continue, you agree to the LinkedIn <a href="">User</a>, <a
-                    href="">Agreement</a>, <a href="">Privacy
-                    Policy</a>,
-                and <a href="">Cookie Policy</a>.
-            </p>
-
-            <button class="agree" (click)='signup()'>Agree & Join</button>
-
-        <div class="or">
-            <hr class="line">
-            <p>or</p>
-            <hr class="line">
-        </div>
-
-        <button class="google">
-            <img src="./assets/google.png" />
-            Continue with Google
-        </button>
-
-        <div class="signin">
-            <p>Already have an account? </p>
-            <a href="/login">Sign in</a>
-        </div>
-
+    <label for="password" class="labpass">Password </label>
+    <div class="password-container">
+      <input
+        [(ngModel)]="inputPassword"
+        type="{{ showPassword ? 'text' : 'password' }}"
+        class="password"
+        required
+      />
+      <a (click)="togglePassword()" class="show-password">{{ showText }}</a>
+    </div>
+    <div class="isCompanyContainer">
+      <input [(ngModel)]="inputCompany" type="checkbox" />
+      <label for="company">company </label>
     </div>
 
+    <hr />
+
+    <p class="links">
+      By clicking Agree & Join or Continue, you agree to the LinkedIn <a href=""
+        >User</a
+      >, <a href="">Agreement</a>, <a href="">Privacy Policy</a>, and <a href=""
+        >Cookie Policy</a
+      >.
+    </p>
+
+    <button class="agree" (click)="signup()">Agree & Join</button>
+
+    <div class="or">
+      <hr class="line" />
+      <p>or</p>
+      <hr class="line" />
+    </div>
+
+    <div class="signin">
+      <p>Already have an account?</p>
+      <a href="/login">Sign in</a>
+    </div>
+  </div>
 </div>

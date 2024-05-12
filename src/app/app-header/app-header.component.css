@@ -48,6 +48,7 @@
 
 .nav-item img, .profile-icon .profile, .for-business .grid {
     width: 30px;
+    border-radius: 50%;
 }
 
 .dropdown-icon {
@@ -111,4 +112,5 @@
     height: 20px;
     padding: 0px 2px;
 }
+
 

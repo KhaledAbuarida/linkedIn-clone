@@ -14,12 +14,15 @@
 .upper-side {
     display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .upper-side input{
     flex: 10;
     border-radius: 50px;
     border: 1px solid #000;
+    height: 50px;
     padding-left: 20px;
 }
 
@@ -44,4 +47,17 @@
 .post-type img {
     width: 35px;
     height: 35px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+}
+
+.upper-side button {
+    border-radius: 5px;
+    background-color: #0a66c2;
+    color: #fff;
+    width: 80px;
+    height: 50px;
+    font-size: large;
 }
