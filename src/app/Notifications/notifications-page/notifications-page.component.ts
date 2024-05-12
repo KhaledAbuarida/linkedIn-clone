@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppHeaderComponent } from "../app-header/app-header.component";
+import { AppHeaderComponent } from "../../app-header/app-header.component";
 import { NotificationsHiringComponent } from "../notifications-hiring/notifications-hiring.component";
 import { NotificationsBodyComponent } from "../notifications-body/notifications-body.component";
 import { ManageNotificationsComponent } from "../notifications-manage/notifications-manage.component";

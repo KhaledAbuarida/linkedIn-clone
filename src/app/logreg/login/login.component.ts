@@ -1,8 +1,8 @@
 import { Component, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router'; // Import Router
-import { UserServiceService } from '../services/user-service.service';
-import { CompanyService } from '../services/company.service';
+import { UserServiceService } from '../../services/user-service.service';
+import { CompanyService } from '../../services/company.service';
 
 
 

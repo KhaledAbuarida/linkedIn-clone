@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Firestore, addDoc, collection } from '@angular/fire/firestore';
-import { Post } from '../model/post';
+import { Post } from '../../model/post';
 import { FormsModule } from '@angular/forms';
 
 @Component({

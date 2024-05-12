@@ -4,7 +4,7 @@ import { RecentVisitComponent } from "../recent-visit/recent-visit.component";
 import { AddPostComponent } from "../add-post/add-post.component";
 import { FeedComponent } from "../feed/feed.component";
 import { AddFollowingsComponent } from "../add-followings/add-followings.component";
-import { AppHeaderComponent } from "../app-header/app-header.component";
+import { AppHeaderComponent } from "../../app-header/app-header.component";
 
 @Component({
     selector: 'app-home-page',
