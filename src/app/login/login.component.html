@@ -1,7 +1,4 @@
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
 
 <div class="body-container" ng-init="showText='Show'">
   <img class="logo" src="./assets/navbar/link.png" alt="" />
@@ -16,12 +13,7 @@
 
     <label for="password" class="labpass">Password </label>
     <div class="password-container">
-      <input
-        [(ngModel)]="inputPassword"
-        type="{{ showPassword ? 'text' : 'password' }}"
-        class="password"
-        required
-      />
+      <input [(ngModel)]="inputPassword" type="{{ showPassword ? 'text' : 'password' }}" class="password" required />
       <a (click)="togglePassword()" class="show-password">{{ showText }}</a>
     </div>
 
@@ -41,11 +33,8 @@
     </div>
 
     <p class="links">
-      By clicking Agree & Join or Continue, you agree to the LinkedIn <a href=""
-        >User</a
-      >, <a href="">Agreement</a>, <a href="">Privacy Policy</a>, and <a href=""
-        >Cookie Policy</a
-      >.
+      By clicking Agree & Join or Continue, you agree to the LinkedIn <a href="">User</a>, <a href="">Agreement</a>, <a
+        href="">Privacy Policy</a>, and <a href="">Cookie Policy</a>.
     </p>
   </div>
 </div>

@@ -20,7 +20,7 @@ export class LoginComponent {
   inputEmail: string = '';
   inputPassword: string = '';
   inputCompany: boolean = false;
-  constructor(private router: Router, public userservice: UserServiceService,public companyService:CompanyService) { }
+  constructor(private router: Router, public userservice: UserServiceService, public companyService: CompanyService) { }
 
   async login() {
     if (this.inputCompany) {
