@@ -2,6 +2,7 @@ import { Component, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router'; // Import Router
 import { UserServiceService } from '../services/user-service.service';
+import { CompanyService } from '../services/company.service';
 
 
 
@@ -18,22 +19,46 @@ export class LoginComponent {
   showText: string = 'Show'; // Initial text for the link
   inputEmail: string = '';
   inputPassword: string = '';
-
-  constructor(private router: Router, public userservice: UserServiceService) {}
+  inputCompany: boolean = false;
+  constructor(private router: Router, public userservice: UserServiceService,public companyService:CompanyService) { }
 
   async login() {
-    try{
-      console.log(this.inputEmail, this.inputPassword )
-    let user = await this.userservice.finduser(this.inputEmail, this.inputPassword)
+    if (this.inputCompany) {
+      console.log(this.inputEmail, this.inputPassword)
+      let user = await this.companyService.findCompany(this.inputEmail, this.inputPassword)
+      try {
+        console.log(this.inputEmail, this.inputPassword)
+        let user = await this.companyService.findCompany(this.inputEmail, this.inputPassword)
 
-    if(!user){
-      alert("you entered wrong email or password!");
-    }else {
-      user = null;
-      this.router.navigate(['/']); // Replace '/home' with your actual home page route
+        if (!user) {
+          alert("you entered wrong email or password!");
+        } else {
+          user = null;
+          this.router.navigate(['/']); // Replace '/home' with your actual home page route
+        }
+      } catch (err) {
+        console.log(err)
+      }
     }
-    }catch(err) {
-      console.log(err)
+    else {
+
+      console.log(this.inputEmail, this.inputPassword)
+      let user = await this.userservice.finduser(this.inputEmail, this.inputPassword)
+      try {
+        console.log(this.inputEmail, this.inputPassword)
+        let user = await this.userservice.finduser(this.inputEmail, this.inputPassword)
+
+        if (!user) {
+          alert("you entered wrong email or password!");
+        } else {
+          user = null;
+          this.router.navigate(['/']); // Replace '/home' with your actual home page route
+        }
+      } catch (err) {
+        console.log(err)
+      }
+
+
     }
   }
 

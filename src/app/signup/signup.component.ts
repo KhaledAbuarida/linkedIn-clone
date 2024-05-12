@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { user } from '../model/user';
 import { UserServiceService } from '../services/user-service.service';
 import { Firestore } from '@angular/fire/firestore';
+import { CompanyService } from '../services/company.service';
+import { Company } from '../model/company';
 
 @Component({
   selector: 'app-signup',
@@ -19,11 +21,20 @@ export class SignupComponent {
   showText: string = 'Show'; // Initial text for the link
   inputEmail: string = '';
   inputPassword: string = '';
+  inputCompany:boolean =false;
 
-  constructor(private router: Router, public userservice: UserServiceService) {} // Inject Router
+  constructor(private router: Router, public userservice: UserServiceService,public companyservice:CompanyService) {} // Inject Router
 
   signup(): void {
-    const newUser = new user();
+    if(this.inputCompany){
+      const company =new Company();
+      company.email = this.inputEmail;
+      company.password = this.inputPassword;
+      this.companyservice.addCompany(company);
+      this.router.navigate(['/']);
+    }
+    else{
+      const newUser = new user();
     newUser.email = this.inputEmail;
     newUser.password = this.inputPassword;
 
@@ -33,9 +44,8 @@ export class SignupComponent {
       this.userservice.addUser(newUser);
       this.router.navigate(['/']); // Replace '/home' with your actual home page route
     }
-
-
-    // Navigate to home page after signup
+    }
+    
   }
 
   togglePassword(): void {

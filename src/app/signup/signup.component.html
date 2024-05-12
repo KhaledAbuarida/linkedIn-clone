@@ -17,7 +17,10 @@
                 <input [(ngModel)]="inputPassword" type="{{ showPassword? 'text' : 'password' }}" class="password" required>
                 <a (click)="togglePassword()" class="show-password">{{showText}}</a>
             </div>
-
+            
+                <label for="company" >company </label>
+                <input [(ngModel)]="inputCompany" type="checkbox">
+            
             <hr>
 
             <p class="links">

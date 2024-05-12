@@ -7,6 +7,8 @@ import { UserServiceService } from './services/user-service.service';
 import { Observable } from 'rxjs';
 import { user } from './model/user';
 import { Email } from '@mui/icons-material';
+import { Job } from './model/job';
+import { JobService } from './services/job.service';
 
 @Component({
   selector: 'app-root',
@@ -18,16 +20,17 @@ import { Email } from '@mui/icons-material';
 export class AppComponent {
   title = 'linkedIn-clone';
   
-  userobserv :Observable<user[]>;
+  userobserv :Observable<Job[]>;
   
-  constructor(private router: Router,userservice :UserServiceService) {
-    this.userobserv =userservice.getUsers();
-    let user1=new user();
-    this.userobserv.subscribe(users => {
-    });
-    const hossam =userservice.finduser('khaled@khaled.com','123');
+  constructor(private router: Router,jobService :JobService) {
     
-    console.log(hossam);
+
+    this.userobserv =jobService.getJobs();
+    this.userobserv.subscribe(jobs => {
+      console.log(jobs);
+    });
+    
+    
    }
 
   isSignupPage(): boolean {
