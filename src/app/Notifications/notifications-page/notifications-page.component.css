@@ -1,11 +1,11 @@
 .notifications-page-container {
     display: flex;
     background-color: #e2dfdf;
-    height: 300px;
+    height: 700px;
     padding: 20px;
     border-radius: 20px;
     justify-content: center;
-    /* gap: 10px */
+    gap: 10px
 }
 
 .left {
