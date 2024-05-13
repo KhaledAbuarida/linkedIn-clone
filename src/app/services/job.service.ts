@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Firestore, addDoc, collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs/internal/Observable';
-import { Job } from '../model/Job';
+import { Job } from '../model/job';
 
 @Injectable({
   providedIn: 'root'

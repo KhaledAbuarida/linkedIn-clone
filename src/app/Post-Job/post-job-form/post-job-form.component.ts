@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { JobService } from '../../services/job.service';
-import { Job } from '../../model/Job';
+import { Job } from '../../model/job';
 import { CompanyService } from '../../services/company.service';
 import { Company } from '../../model/company';
 
