@@ -1,0 +1,54 @@
+<div class="job-application-form">
+    <div class="header">
+        <h1>Post a job for free</h1>
+        <p>Increase the quality of your hire</p>
+    </div>
+    <form action="/submit-job" method="post">
+
+        <div class="inputs">
+            <div class="first-row">
+                <div class="form-row">
+                    <label for="title">Job Title</label>
+                    <input type="text" id="title" name="title" placeholder="" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="" required>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="" required>
+            </div>
+            <div class="first-row">
+
+                <div class="form-row">
+                    <label for="description">Job Description</label>
+                    <textarea id="description" name="description" rows="6" placeholder=""></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="benefits">Benefits</label>
+                    <textarea id="benefits" name="benefits" rows="6" placeholder=""></textarea>
+                </div>
+            </div>
+
+            <div class="first-row">
+                <div class="form-row">
+                    <label for="qualifications">Qualifications</label>
+                    <textarea id="qualifications" name="qualifications" rows="6" placeholder=""></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="responsibilities">Responsibilities</label>
+                    <textarea id="responsibilities" name="responsibilities" rows="6" placeholder="">
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <button type="submit">Get started for free</button>
+    </form>
+</div>

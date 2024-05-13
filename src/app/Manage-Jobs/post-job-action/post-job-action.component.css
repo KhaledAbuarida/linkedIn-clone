@@ -1,0 +1,31 @@
+.info-container {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 250px;
+    height: 125px;
+    padding: 10px 20px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.info-container button {
+    border-radius: 30px;
+    width: 260px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #0A66C2;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.info-container button a {
+    color: #0A66C2;
+    text-decoration: none;
+}
+
+.info-container button img {
+    width: 25px;
+    vertical-align: middle;
+    padding: 0px 5px;
+}

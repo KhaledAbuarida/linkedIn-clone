@@ -1,0 +1,16 @@
+.body-container {
+    background-color: #36454F;
+    height: 100vh;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-container {
+    flex: 1;
+}
+
+.form-container {
+    flex: 11;
+}

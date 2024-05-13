@@ -1,0 +1,31 @@
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 60px;
+    gap: 20px;
+}
+
+.header-content img {
+    width: 40px;
+}
+
+.header-content .logo,
+.manage {
+    margin: 10px 60px;
+}
+
+.header-content .manage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content .manage a {
+    text-decoration: none;
+    padding-right: 10px;
+    color: black;
+    font-weight: 400;
+}
