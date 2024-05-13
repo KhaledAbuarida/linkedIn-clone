@@ -1,0 +1,77 @@
+.job-application-form {
+    width: 650px;
+    height: 650px;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.job-application-form .header p {
+    margin-top: -15px;
+}
+
+
+/* Style input fields */
+.job-application-form input[type="text"],
+.job-application-form input[type="password"],
+.job-application-form textarea {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+
+.job-application-form button {
+    background-color: #0A66C2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.job-application-form button:hover {
+    background-color: #0b5a87;
+    cursor: pointer;
+}
+
+.job-application-form label {
+    padding-right: 30px;
+}
+
+.job-application-form label,
+.job-application-form input,
+.job-application-form textarea {
+    display: block;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.first-row {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.job-application-form button {
+    background-color: #0A66C2;
+    color: #fff;
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: 120px;
+}

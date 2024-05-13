@@ -6,10 +6,10 @@ import { PostJobActionComponent } from "../post-job-action/post-job-action.compo
 @Component({
   selector: 'app-post-job-page',
   standalone: true,
-  templateUrl: './post-job-page.component.html',
-  styleUrl: './post-job-page.component.css',
+  templateUrl: './manage-job-page.component.html',
+  styleUrl: './manage-job-page.component.css',
   imports: [PostJobInfoComponent, PostJobListComponent, PostJobActionComponent]
 })
-export class PostJobPageComponent {
+export class ManageJobPageComponent {
 
 }

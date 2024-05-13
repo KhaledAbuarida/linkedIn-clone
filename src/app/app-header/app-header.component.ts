@@ -25,8 +25,9 @@ export class AppHeaderComponent {
       if (firstChild && firstChild.routeConfig) {
         const isLoginPage = firstChild.routeConfig.path === 'login';
         const isSignupPage = firstChild.routeConfig.path === 'signup';
+        const isPostJobPage = firstChild.routeConfig.path === 'post-job';
 
-        this.hideHeader = isLoginPage || isSignupPage;
+        this.hideHeader = isLoginPage || isSignupPage || isPostJobPage;
       }
     });
   }

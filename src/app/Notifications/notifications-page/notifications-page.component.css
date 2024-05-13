@@ -1,8 +1,9 @@
 .notifications-page-container {
     display: flex;
     background-color: #e2dfdf;
-    height: calc(100vh - 125px);
+    height: 300px;
     padding: 20px;
+    border-radius: 20px;
     justify-content: center;
     /* gap: 10px */
 }
