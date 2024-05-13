@@ -10,7 +10,7 @@ import { filter } from 'rxjs/operators';
   templateUrl: './app-header.component.html',
   styleUrl: './app-header.component.css'
 })
-export class AppHeaderComponent {
+export class AppHeaderComponent implements OnInit {
   hideHeader: boolean = false;
 
   constructor(private router: Router, private route: ActivatedRoute) { }
@@ -23,11 +23,8 @@ export class AppHeaderComponent {
 
       const firstChild = this.route.snapshot.firstChild;
       if (firstChild && firstChild.routeConfig) {
-        const isLoginPage = firstChild.routeConfig.path === 'login';
-        const isSignupPage = firstChild.routeConfig.path === 'signup';
-        const isPostJobPage = firstChild.routeConfig.path === 'post-job';
-
-        this.hideHeader = isLoginPage || isSignupPage || isPostJobPage;
+        const path = firstChild.routeConfig.path;
+        this.hideHeader = (path === 'login' || path === 'signup' || path === 'post-job' || path === 'company-signup');
       }
     });
   }

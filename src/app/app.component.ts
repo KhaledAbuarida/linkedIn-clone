@@ -35,7 +35,7 @@ export class AppComponent {
 
   isSignupPage(): boolean {
     console.log(this.router.url);
-    return (this.router.url == '/signup');
+    return (this.router.url == '/company-signup');
   }
 
   isLoginPage(): boolean {
