@@ -1,0 +1,13 @@
+.container {
+    background-color: #fff;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 70px;
+}
+
+.container img {
+    width: 40px;
+    padding: 20px 10px;
+}

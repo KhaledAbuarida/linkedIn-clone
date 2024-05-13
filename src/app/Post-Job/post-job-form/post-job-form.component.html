@@ -1,0 +1,57 @@
+<div class="job-application-form">
+    <div class="header">
+        <h1>Post a job for free</h1>
+        <p>Increase the quality of your hire</p>
+    </div>
+    <form method="post">
+
+        <div class="inputs">
+            <div class="first-row">
+                <div class="form-row">
+                    <label for="title">Job Title</label>
+                    <input [(ngModel)]="title" type="text" id="title" name="title" placeholder="" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="company">Company Name</label>
+                    <input [(ngModel)]="company" type="text" id="company" name="company" placeholder="" required>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label for="location">Location</label>
+                <input [(ngModel)]="location" type="text" id="location" name="location" placeholder="" required>
+            </div>
+            <div class="first-row">
+
+                <div class="form-row">
+                    <label for="description">Job Description</label>
+                    <textarea [(ngModel)]="description" id="description" name="description" rows="6"
+                        placeholder=""></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="benefits">Benefits</label>
+                    <textarea [(ngModel)]="benefits" id="benefits" name="benefits" rows="6" placeholder=""></textarea>
+                </div>
+            </div>
+
+            <div class="first-row">
+                <div class="form-row">
+                    <label for="qualifications">Qualifications</label>
+                    <textarea [(ngModel)]="qualifications" id="qualifications" name="qualifications" rows="6"
+                        placeholder=""></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="responsibilities">Responsibilities</label>
+                    <textarea [(ngModel)]="responsibilities" id="responsibilities" name="responsibilities" rows="6"
+                        placeholder="">
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <button (click)="addJob()">Get started for free</button>
+    </form>
+</div>

@@ -1,0 +1,51 @@
+<div class="body-container">
+    <div class="header">
+        <h2>Register</h2>
+        <p>Your Company</p>
+    </div>
+    <div class="form-container">
+        <form>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="email" [(ngModel)]="email">
+            </div>
+
+            <div class="field">
+                <label for="company-name">Company name</label>
+                <input type="text" name="company-name" id="company-name" class="company-name" [(ngModel)]="name">
+            </div>
+
+            <div class="field">
+                <label for="company-number">Company number</label>
+                <input type="text" name="company-number" id="company-number" class="company-number"
+                    [(ngModel)]="number">
+            </div>
+
+            <div class="field">
+                <label for="location">Location</label>
+                <input type="text" name="location" id="location" class="location" [(ngModel)]="location">
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="password" [(ngModel)]="password">
+            </div>
+
+            <div class="field">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" class="description" rows="5" [(ngModel)]="description">
+                        </textarea>
+            </div>
+            <div class="addlogo">
+                <p>Add your logo</p>
+                <input type="file" id="photo" name="photo" accept="image/*" [(ngModel)]="image">
+            </div>
+
+            <button type="submit" class="join" (click)="addCompany()">
+                <h2>Join</h2>
+            </button>
+        </form>
+        <p>Already on LinkedIn? <a href="/login">Sign in</a></p>
+    </div>
+</div>

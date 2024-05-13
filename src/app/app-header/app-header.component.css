@@ -1,4 +1,3 @@
-
 .header-container {
     height: 80px;
     /* width: 100%; */
@@ -46,7 +45,9 @@
     margin: 3px;
 }
 
-.nav-item img, .profile-icon .profile, .for-business .grid {
+.nav-item img,
+.profile-icon .profile,
+.for-business .grid {
     width: 30px;
     border-radius: 50%;
 }
@@ -81,6 +82,7 @@
 .logo img {
     width: 45px;
 }
+
 .left .search input {
     height: 42px;
     width: 150%;
@@ -88,7 +90,7 @@
     outline: none;
     border: none;
     background-color: #e2dfdf;
-    font-size: 15px;   
+    font-size: 15px;
 }
 
 .left input::placeholder {
@@ -112,5 +114,3 @@
     height: 20px;
     padding: 0px 2px;
 }
-
-
