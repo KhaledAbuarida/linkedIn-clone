@@ -22,10 +22,19 @@ export class PostJobFormComponent {
   responsibilities: string = '';
   qualifications: string = '';
 
+  benefits_s: string[] = [];
+  responsibilities_s: string[] = [];
+  qualifications_s: string[] = [];
+
+
   constructor(private router: Router, public jobservice: JobService, public companyservice: CompanyService) { }
 
   async addJob() {
     const job = new Job();
+
+    this.benefits_s.push(this.benefits)
+    this.responsibilities_s.push(this.responsibilities)
+    this.qualifications_s.push(this.qualifications)
 
     try {
       const Company = await this.companyservice.findCompanybyname(this.company);
@@ -38,9 +47,9 @@ export class PostJobFormComponent {
 
     job.location = this.location
     job.description = this.description
-    job.benefits = []
-    job.responsibilities = []
-    job.qualifications = []
+    job.benefits = this.benefits_s
+    job.responsibilities = this.responsibilities_s
+    job.qualifications = this.qualifications_s
 
     try {
       this.jobservice.addJob(job);
