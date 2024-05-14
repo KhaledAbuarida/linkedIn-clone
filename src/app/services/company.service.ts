@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, addDoc, collection, collectionData, getDocs, query, where } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData, doc, getDoc, getDocs, query, setDoc, where } from '@angular/fire/firestore';
 import { Company } from '../model/company';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -27,7 +27,13 @@ export class CompanyService {
     const querySnapshot = await getDocs(query(companyCollection, where('email', '==', email), where('password', '==', password)));
     if (!querySnapshot.empty) {
       // User found, return user data
-      const companyData = querySnapshot.docs[0].data();
+      const userDoc = querySnapshot.docs[0];
+      const companyData = userDoc.data();
+      const userId = userDoc.id;
+
+      // Store user ID in local storage
+      localStorage.setItem('userId', userId);
+      
 
       return companyData;
     } else {
@@ -52,4 +58,24 @@ export class CompanyService {
       return company;
     }
   }
+  async findCompanyById(companyId: string): Promise<Company> {
+    const companyDocRef = doc(this.firestore, 'company', companyId);
+    const companyDoc = await getDoc(companyDocRef);
+
+    if (companyDoc.exists()) {
+      // Company found, return company data
+      const companyData = companyDoc.data() as Company;
+      companyData.id = companyId;
+      return companyData;
+    } else {
+      // No company found with the provided ID, create a new one
+      const newCompany = new Company();
+      newCompany.id = companyId;
+      newCompany.company_name = 'New Company Name'; // You might want to set a default name or get it from somewhere
+
+      await setDoc(companyDocRef, newCompany);
+      return newCompany;
+    }
+  }
+
 }
