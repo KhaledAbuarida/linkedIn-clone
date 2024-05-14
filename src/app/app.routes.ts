@@ -9,6 +9,8 @@ import { LoginComponent } from './logreg/login/login.component';
 import { PostJobPageComponent } from './Post-Job/post-job-page/post-job-page.component';
 import { ManageJobPageComponent } from './Manage-Jobs/manage-job-page/manage-job-page.component';
 import { SignupCompanyPageComponent } from './logreg/signup-company/signup-company-page/signup-company-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component'
+
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -19,7 +21,9 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'manage-jobs', component: ManageJobPageComponent },
     { path: 'post-job', component: PostJobPageComponent },
-    { path: 'company-signup', component: SignupCompanyPageComponent }
+    { path: 'company-signup', component: SignupCompanyPageComponent },
+    { path: 'profile', component: ProfilePageComponent }
+
 
 
 ];
