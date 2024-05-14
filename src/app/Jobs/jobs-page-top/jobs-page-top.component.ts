@@ -15,11 +15,12 @@ import { Router } from '@angular/router';
 })
 export class JobsPageTopComponent {
   jobs$!: Observable<Job[]>;
+
   constructor(
     private router: Router,
     private jobService: JobService,
     private userService: UserServiceService
-  ) {}
+  ) { }
 
   async save(job: Job) {
     try {

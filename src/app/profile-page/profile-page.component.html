@@ -6,17 +6,17 @@
                 <img src="./assets/navbar/profile.png" alt="User Avatar">
             </div>
             <div class="user-info">
-                <h1>Khaled Younis</h1>
+                <h1>{{user.email}}</h1>
                 <p>UI/UX DESIGNER</p>
             </div>
             <div class="contact-info">
                 <div class="contact-item">
                     <img src=".\assets\email.png" alt="Email Icon">
-                    <p>Khaledyouniis1&#64;gmail.com</p>
+                    <p>{{user.github}}</p>
                 </div>
                 <div class="contact-item">
                     <img src=".\assets\phone-call.png" alt="Phone Icon">
-                    <p>01024740013</p>
+                    <p>{{user.phone}}</p>
                 </div>
             </div>
             <input type="file" id="resume-upload" style="display: none;">
@@ -28,22 +28,19 @@
 
     <div class="another-data">
         <div class="saved-jobs">
-            <h3>Saved Jobs</h3>
+            <h3>Job preference</h3>
             <div class="jobs-container">
-                <div class="job">
-                    <p>Job 1</p>
-                    <p>Job 2</p>
-                    <p>Job 3</p>
+                <div class="job" *ngFor="let i of user.job_preferences">
+                    <p>{{i }}</p>
+
                 </div>
             </div>
         </div>
 
         <div class="preferences">
-            <h3>preferences</h3>
-            <div class="preferences-container">
-                <p>preference 1</p>
-                <p>preference 2</p>
-                <p>preference 3</p>
+            <h3>Saved Jobs</h3>
+            <div class="preferences-container" *ngFor="let i of user.jobs_saved">
+                {{i.title}}
             </div>
         </div>
     </div>

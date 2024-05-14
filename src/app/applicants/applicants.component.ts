@@ -10,9 +10,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './applicants.component.css',
 })
 export class ApplicantsComponent {
-  applicants!: object;
+  applicants!: any[];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
