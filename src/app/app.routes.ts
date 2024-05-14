@@ -9,26 +9,24 @@ import { LoginComponent } from './logreg/login/login.component';
 import { PostJobPageComponent } from './Post-Job/post-job-page/post-job-page.component';
 import { ManageJobPageComponent } from './Manage-Jobs/manage-job-page/manage-job-page.component';
 import { SignupCompanyPageComponent } from './logreg/signup-company/signup-company-page/signup-company-page.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component'
-
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { JobDetailsComponent } from './job-details/job-details.component';
 
 export const routes: Routes = [
-    { path: '', component: HomePageComponent },
-    { path: 'notifications', component: NotificationsPageComponent },
-    { path: 'network', component: MyNetworkPageComponent },
-    { path: 'jobs', component: JobsPageComponent },
-    { path: 'signup', component: SignupComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'manage-jobs', component: ManageJobPageComponent },
-    { path: 'post-job', component: PostJobPageComponent },
-    { path: 'company-signup', component: SignupCompanyPageComponent },
-    { path: 'profile', component: ProfilePageComponent }
-
-
-
+  { path: '', component: HomePageComponent },
+  { path: 'notifications', component: NotificationsPageComponent },
+  { path: 'network', component: MyNetworkPageComponent },
+  { path: 'jobs', component: JobsPageComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'manage-jobs', component: ManageJobPageComponent },
+  { path: 'post-job', component: PostJobPageComponent },
+  { path: 'company-signup', component: SignupCompanyPageComponent },
+  { path: 'profile', component: ProfilePageComponent },
+  { path: 'job-details', component: JobDetailsComponent },
 ];
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

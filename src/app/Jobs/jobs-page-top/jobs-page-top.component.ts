@@ -4,17 +4,22 @@ import { Job } from '../../model/job';
 import { Observable } from 'rxjs/internal/Observable';
 import { CommonModule } from '@angular/common';
 import { UserServiceService } from '../../services/user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobs-page-top',
   standalone: true,
-  imports: [CommonModule,],
+  imports: [CommonModule],
   templateUrl: './jobs-page-top.component.html',
-  styleUrl: './jobs-page-top.component.css'
+  styleUrl: './jobs-page-top.component.css',
 })
 export class JobsPageTopComponent {
   jobs$!: Observable<Job[]>;
-  constructor(private jobService: JobService,private userService :UserServiceService) {}
+  constructor(
+    private router: Router,
+    private jobService: JobService,
+    private userService: UserServiceService
+  ) {}
 
   async save(job: Job) {
     try {
@@ -26,7 +31,7 @@ export class JobsPageTopComponent {
     }
   }
 
-  async apply(job: Job){
+  async apply(job: Job) {
     try {
       await this.userService.applyJob(job);
       alert('Job applied successfully!');
@@ -34,6 +39,12 @@ export class JobsPageTopComponent {
       console.error('Error saving job:', error);
       alert('Failed to save job. Please try again.');
     }
+  }
+
+  viewJobDetails(job: Job) {
+    console.log(job);
+    // Assuming you have a route named 'job-details/:id', pass the job ID as a parameter
+    this.router.navigate(['job-details', job]); // Replace 'job-details' with your actual route
   }
 
   ngOnInit(): void {

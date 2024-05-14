@@ -1,23 +1,31 @@
 <div class="list-container">
-    <h2>Posted Jobs</h2>
-    <div class="job-card">
+  <h2>Posted Jobs</h2>
+  <div *ngIf="jobs$ | async as jobs; else loading">
+    <div *ngFor="let job of jobs">
+      <div class="job-card">
         <div class="job-listing">
-            <div class="job-details">
-                <h3>User Interface Designer</h3>
-                <p>Company: ABCxyz</p>
-                <p>Location: Cairo, Egypt (On-site)</p>
-                <p>Status: Active</p>
-                <p>Posted: 1 day ago</p>
-                <p>Applicants: 2</p>
-            </div>
-            <div class="job-actions">
-                <ul class="action-list">
-                    <li>Edit Job</li>
-                    <li>View Applicants</li>
-                    <li>Delete Job</li>
-                    <li>Pause</li>
-                </ul>
-            </div>
+          <div class="job-details">
+            <h3>User Interface Designer</h3>
+            <p>Company: ABCxyz</p>
+            <p>Location: Cairo, Egypt (On-site)</p>
+            <p>Status: Active</p>
+            <p>Posted: 1 day ago</p>
+            <p>Applicants: 2</p>
+          </div>
+          <div class="job-actions">
+            <ul class="action-list">
+              <li>Edit Job</li>
+              <li>View Applicants</li>
+              <li>Delete Job</li>
+              <li>Pause</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+
+  <ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>
 </div>
