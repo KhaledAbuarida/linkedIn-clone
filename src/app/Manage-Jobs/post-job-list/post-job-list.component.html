@@ -5,16 +5,19 @@
       <div class="job-card">
         <div class="job-listing">
           <div class="job-details">
-            <h3>{{job.title}}</h3>
+            <h3>{{ job.title }}</h3>
             <p>Company: {{ job.company?.company_name }}</p>
-            <p>Location: {{job.location}}</p>
+            <p>Location: {{ job.location }}</p>
             <p>Status: Active</p>
-            
           </div>
           <div class="job-actions">
             <ul class="action-list">
               <li>Edit Job</li>
-              <li>View Applicants</li>
+              <li>
+                <a (click)="viewApplicant(job.Applicants!)">
+                  View Applicants
+                </a>
+              </li>
               <li>
                 <a (click)="delete(job)">Delete Job</a>
               </li>

@@ -22,23 +22,24 @@ export class PostJobListComponent {
     private jobService: JobService,
     private userService: UserServiceService,
     private companyService: CompanyService
-  ) {
-    
-  }
+  ) {}
   async ngOnInit(): Promise<void> {
     const userI = localStorage.getItem('userId');
-    const company:Company =await this.companyService.findCompanyById(userI!);
-    console.log(company.company_name)
-    console.log(this.jobService.getCompanyJobs(company.company_name!))
+    const company: Company = await this.companyService.findCompanyById(userI!);
+    console.log(company.company_name);
+    console.log(this.jobService.getCompanyJobs(company.company_name!));
     this.jobs$ = this.jobService.getCompanyJobs(company.company_name!);
   }
-  delete(job:Job){
-    try{
+  delete(job: Job) {
+    try {
+      this.jobService.deleteJob(job.id!);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
-      this.jobService.deleteJob(job.id!)
-    }
-    catch(err){
-      console.log(err)
-    }
+  viewApplicant(jobApplicants: string[]) {
+    console.log("navigate",jobApplicants);
+    this.router.navigate(['applicants', jobApplicants]);
   }
 }

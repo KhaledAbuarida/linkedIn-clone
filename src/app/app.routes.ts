@@ -11,6 +11,7 @@ import { ManageJobPageComponent } from './Manage-Jobs/manage-job-page/manage-job
 import { SignupCompanyPageComponent } from './logreg/signup-company/signup-company-page/signup-company-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { JobDetailsComponent } from './job-details/job-details.component';
+import { ApplicantsComponent } from './applicants/applicants.component';
 
 export const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path: 'company-signup', component: SignupCompanyPageComponent },
   { path: 'profile', component: ProfilePageComponent },
   { path: 'job-details', component: JobDetailsComponent },
+  { path: 'applicants', component: ApplicantsComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
