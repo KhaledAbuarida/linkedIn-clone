@@ -4,6 +4,8 @@ import {
   addDoc,
   collection,
   collectionData,
+  deleteDoc,
+  doc,
   getDocs,
   query,
   where,
@@ -30,9 +32,19 @@ export class JobService {
     });
   }
 
+  async deleteJob(jobId: string): Promise<void> {
+    try {
+      const jobDocRef = doc(this.firestore, 'jobs', jobId);
+      await deleteDoc(jobDocRef);
+      console.log(`Job with ID ${jobId} deleted successfully.`);
+    } catch (error) {
+      console.error('Error deleting job:', error);
+    }
+  }
+
   getCompanyJobs(companyName: string): Observable<Job[]> {
     const jobCollection = collection(this.firestore, 'jobs');
-    const q = query(jobCollection, where('company_name', '==', companyName));
+    const q = query(jobCollection, where('company.company_name', '==', companyName));
     const jobs = collectionData(q, { idField: 'id' });
     return jobs as Observable<Job[]>;
   }
