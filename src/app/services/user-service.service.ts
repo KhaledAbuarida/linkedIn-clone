@@ -100,5 +100,12 @@ async replaceUserById(userId: string, newUserData: user): Promise<void> {
     this.replaceUserById(userI!,user1);
   }
   
+  async applyJob(job :Job){
+    const userI = localStorage.getItem('userId');
+    job.Applicants?.push(userI!);
+    const jobsCollectionRef = collection(this.firestore, 'jobs');
+    const jobDocRef = doc(jobsCollectionRef, job.id);
+    await setDoc(jobDocRef, job);
+  }
  
 }

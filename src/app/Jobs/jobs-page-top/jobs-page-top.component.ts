@@ -26,6 +26,16 @@ export class JobsPageTopComponent {
     }
   }
 
+  async apply(job: Job){
+    try {
+      await this.userService.applyJob(job);
+      alert('Job applied successfully!');
+    } catch (error) {
+      console.error('Error saving job:', error);
+      alert('Failed to save job. Please try again.');
+    }
+  }
+
   ngOnInit(): void {
     this.jobs$ = this.jobService.getJobs();
   }
