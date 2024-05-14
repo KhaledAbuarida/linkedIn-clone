@@ -1,4 +1,40 @@
 <div class="body-container">
-    <h3>Top job picks for you</h3>
-    <p>Based on your profile and search history</p>
+
+
+
+    <div *ngIf="jobs$ | async as jobs; else loading">
+        <div *ngFor="let job of jobs">
+
+            <div class="job-card">
+                <div class="job-listing">
+                    <div class="job-details">
+                        <h3>{{job.title}}</h3>
+                        <p>Description: {{job.description}}</p>
+                        <p>Company: {{job.company?.company_name}}</p>
+                        <p>Location: {{job.location}}</p>
+                        <p>Benefits: {{job.benefits}}</p>
+                        <p>qualifications: {{job.qualifications}}</p>
+                        <p>responsibilities: {{job.responsibilities}}</p>
+                    </div>
+                    <div class="job-actions">
+                        <ul class="action-list">
+                            <li>
+                                <button (click)="save(job)">save Job</button>
+                            </li>
+                            <li>
+                                <button (click)="apply(job)">apply for job</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <ng-template #loading>
+        <p>Loading...</p>
+    </ng-template>
+
+
 </div>

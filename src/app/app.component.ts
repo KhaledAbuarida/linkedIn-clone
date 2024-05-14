@@ -7,7 +7,7 @@ import { UserServiceService } from './services/user-service.service';
 import { Observable } from 'rxjs';
 import { user } from './model/user';
 import { Email } from '@mui/icons-material';
-import { Job } from './model/Job';
+import { Job } from './model/job';
 import { JobService } from './services/job.service';
 
 @Component({

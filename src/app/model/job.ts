@@ -11,4 +11,5 @@ export class Job {
     qualifications?: string[];
     responsibilities?: string[];
     users?: user[];
+    Applicants?: string[];
 }
