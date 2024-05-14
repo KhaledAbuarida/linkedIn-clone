@@ -1,29 +1,40 @@
 <div class="body-container">
 
 
-    <div class="job-card">
-        <div class="job-listing">
-            <div class="job-details">
-                <h3>User Interface Designer</h3>
-                <p>Company: ABCxyz</p>
-                <p>Location: Cairo, Egypt (On-site)</p>
-                <p>Status: Active</p>
-                <p>Posted: 1 day ago</p>
-                <p>Applicants: 2</p>
+
+    <div *ngIf="jobs$ | async as jobs; else loading">
+        <div *ngFor="let job of jobs">
+
+            <div class="job-card">
+                <div class="job-listing">
+                    <div class="job-details">
+                        <h3>{{job.title}}</h3>
+                        <p>Description: {{job.description}}</p>
+                        <p>Company: {{job.company?.company_name}}</p>
+                        <p>Location: {{job.location}}</p>
+                        <p>Benefits: {{job.benefits}}</p>
+                        <p>qualifications: {{job.qualifications}}</p>
+                        <p>responsibilities: {{job.responsibilities}}</p>
+                    </div>
+                    <div class="job-actions">
+                        <ul class="action-list">
+                            <li>
+                                <button (click)="save(job)">save Job</button>
+                            </li>
+                            <li>
+                                <button>apply for job</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="job-actions">
-                <ul class="action-list">
-                    <li>
-                        <button>save Job</button>
-                    </li>
-                    <li>
-                        <button>apply for job</button>
-                    </li>
-                    
-                </ul>
-            </div>
+
         </div>
     </div>
-    
+    <ng-template #loading>
+        <p>Loading...</p>
+    </ng-template>
+
 
 </div>
